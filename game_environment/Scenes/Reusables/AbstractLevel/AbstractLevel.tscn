@@ -1,10 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://bm6imajj4mk0o"]
+[gd_scene load_steps=16 format=3 uid="uid://bm6imajj4mk0o"]
 
 [ext_resource type="Texture2D" uid="uid://bb5lujfwqlrmd" path="res://Assets/UI/HealthBar/0.png" id="1_rgyxq"]
 [ext_resource type="Texture2D" uid="uid://x7mk5ax2o54n" path="res://Assets/UI/HealthBar/10.png" id="2_drk6s"]
 [ext_resource type="Script" path="res://Scenes/Levels/UI/HPBar.gd" id="3_ixvwy"]
-[ext_resource type="Script" path="res://Scenes/Levels/UI/Coins.gd" id="4_unlgb"]
-[ext_resource type="Texture2D" uid="uid://s5vc0mitvlsm" path="res://Assets/World/Collectables/Gem/0.png" id="5_x4r3c"]
 [ext_resource type="Texture2D" uid="uid://bfaosth1ip357" path="res://Assets/UI/SwordIcon/0.png" id="6_ocih2"]
 [ext_resource type="Texture2D" uid="uid://bvsmb0y575hpm" path="res://Assets/UI/SwordIcon/5.png" id="7_x25dh"]
 [ext_resource type="Script" path="res://Scenes/Levels/UI/BasicAttack.gd" id="8_jgpqp"]
@@ -44,21 +42,6 @@ nine_patch_stretch = true
 texture_under = SubResource("AtlasTexture_eqto2")
 texture_progress = SubResource("AtlasTexture_q17eb")
 script = ExtResource("3_ixvwy")
-
-[node name="Coins" type="Label" parent="TopUI"]
-offset_left = 73.0
-offset_top = 78.0
-offset_right = 930.0
-offset_bottom = 776.0
-scale = Vector2(0.05, 0.05)
-theme_override_font_sizes/font_size = 500
-text = "0"
-script = ExtResource("4_unlgb")
-
-[node name="Gem" type="Sprite2D" parent="TopUI"]
-position = Vector2(43, 95)
-scale = Vector2(3.48077, 3.48077)
-texture = ExtResource("5_x4r3c")
 
 [node name="AbilitiesUI" type="CanvasLayer" parent="."]
 

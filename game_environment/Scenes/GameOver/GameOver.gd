@@ -37,7 +37,7 @@ func _on_respawn_pressed() -> void:
 	# Reset the player and game.
 	Player.reset()
 	Game.reset()
-	get_tree().change_scene_to_file("res://Scenes/Levels/Level1.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Levels/Level2.tscn")
 
 
 func _on_main_screen_pressed() -> void:
