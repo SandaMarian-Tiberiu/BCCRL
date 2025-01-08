@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1736266486
+::res://::1736334451
 default_bus_layout.tres::AudioBusLayout::7346642078118308585::1718043558::0::1::::<><>::
 README.md::TextFile::-1::1718043542::0::1::::<><>::
 ::res://addons/::1735403002
@@ -1112,9 +1112,9 @@ VisualStyle.tres::Resource/DialogicStyle::4488894568209219631::1736266065::0::1:
 ::res://Dialogic/Assets/::1735403007
 Dress.dch::Resource::-1::1718385873::0::1::::<><>::
 Gem.dch::Resource::-1::1718385873::0::1::::<><>::
-::res://Dialogic/Characters/::1735403007
+::res://Dialogic/Characters/::1736266536
 Aurora.dch::Resource::-1::1718385873::0::1::::<><>::
-Dormogh.dch::Resource::-1::1718385873::0::1::::<><>::
+Dormogh.dch::Resource::-1::1736266536::0::1::::<><>::
 MagicCat.dch::Resource::-1::1717413929::0::1::::<><>::
 Margareta.dch::Resource::-1::1718385873::0::1::::<><>::
 SellerCat.dch::Resource::-1::1718385873::0::1::::<><>::
