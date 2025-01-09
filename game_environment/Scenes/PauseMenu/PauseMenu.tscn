@@ -66,27 +66,5 @@ text = "RESTART"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="MainMenu" type="TextureButton" parent="."]
-offset_left = 301.0
-offset_top = 440.0
-offset_right = 836.0
-offset_bottom = 947.0
-texture_normal = ExtResource("2_uf678")
-texture_pressed = ExtResource("3_8mui0")
-stretch_mode = 5
-
-[node name="Label" type="Label" parent="MainMenu"]
-layout_mode = 0
-offset_left = 36.0
-offset_top = 20.0
-offset_right = 499.0
-offset_bottom = 164.0
-theme_override_fonts/font = ExtResource("4_npt7x")
-theme_override_font_sizes/font_size = 40
-text = "RETURN TO MAIN MENU"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [connection signal="pressed" from="ResumeButton" to="." method="_on_resume_button_pressed"]
 [connection signal="pressed" from="RestartLevel" to="." method="_on_restart_level_pressed"]
-[connection signal="pressed" from="MainMenu" to="." method="_on_main_menu_pressed"]

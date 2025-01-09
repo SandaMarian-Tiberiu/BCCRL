@@ -9,9 +9,7 @@ var audio_player: AudioStreamPlayer = AudioStreamPlayer.new()
 var boss_killed: bool = false
 
 var chapter_names = {
-	"Level1": "Chapter one",
-	"Level2": "Chapter two",
-	"Level3": "Chapter three"
+	"Level3": "Good job !!!"
 }
 
 
@@ -42,9 +40,7 @@ func advance_to_level(level_name: String) -> void:
 	TransitionScene.transition(chapter_names[level_name])
 	await TransitionScene.on_transition_finished
 	
-	# Changes the scene to the new level
-	var location: String = "res://Scenes/Levels/" + level_name + ".tscn"
-	get_tree().change_scene_to_file(location)
+	get_tree().quit()
 	
 	
 func toggle_god_mode() -> void:

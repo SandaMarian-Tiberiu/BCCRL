@@ -18,7 +18,6 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 
 @onready var animation = get_node("AnimationPlayer")
-@onready var game_over = preload("res://Scenes/GameOver/GameOver.tscn").instantiate()
 @onready var camera = $Camera2D
 
 
