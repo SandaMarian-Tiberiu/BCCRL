@@ -1,9 +1,5 @@
-res://Dialogic/Characters/Dormogh.dch
-res://Dialogic/Characters/MagicCat.dch
-res://Dialogic/Characters/Margareta.dch
-res://Dialogic/Characters/SellerCat.dch
-res://Dialogic/Assets/Dress.dch
-res://Dialogic/Characters/Aurora.dch
 res://Scenes/Levels/Level2.tscn
 res://Dialogic/BubbleStyle.tres
 res://Dialogic/VisualStyle.tres
+res://Scenes/Aurora/Aurora.gd
+res://Global/Game.gd

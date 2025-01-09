@@ -506,7 +506,8 @@ script/source = "extends Area2D
 
 func _on_body_entered(body):
 	if body.name == \"Aurora\":
-		Game.advance_to_level(\"Level3\")
+		#Game.advance_to_level(\"Level3\")
+		return
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hchu2"]
