@@ -514,7 +514,8 @@ script/source = "extends Area2D
 
 func _on_body_entered(body):
 	if body.name == \"Aurora\":
-		Game.advance_to_level(\"Level3\")
+		#Game.advance_to_level(\"Level3\")
+		return
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hchu2"]
@@ -594,68 +595,14 @@ camera_right_limit = 3438
 camera_top_limit = -285
 camera_bottom_limit = 815
 
-[node name="Devil" parent="." index="6" instance=ExtResource("16_rqv2l")]
-position = Vector2(385, 161)
-
-[node name="Devil2" parent="." index="7" instance=ExtResource("16_rqv2l")]
-position = Vector2(635, 622)
-
-[node name="Devil3" parent="." index="8" instance=ExtResource("16_rqv2l")]
-position = Vector2(1205, 767)
-
-[node name="Guardian" parent="." index="9" instance=ExtResource("15_i2861")]
-position = Vector2(1147, 773)
-
-[node name="Skeleton" parent="." index="10" instance=ExtResource("14_tusdb")]
-position = Vector2(712, 525)
-
-[node name="Guardian2" parent="." index="11" instance=ExtResource("15_i2861")]
-position = Vector2(1535, 767)
-
-[node name="Guardian3" parent="." index="12" instance=ExtResource("15_i2861")]
-position = Vector2(447, 785)
-
-[node name="Guardian4" parent="." index="13" instance=ExtResource("15_i2861")]
-position = Vector2(508, 779)
-
-[node name="Devil4" parent="." index="14" instance=ExtResource("16_rqv2l")]
-position = Vector2(2006, 641)
-
-[node name="Skeleton2" parent="." index="15" instance=ExtResource("14_tusdb")]
-position = Vector2(2237, 659)
-
-[node name="Guardian5" parent="." index="16" instance=ExtResource("15_i2861")]
-position = Vector2(1909, 782)
-
-[node name="Guardian6" parent="." index="17" instance=ExtResource("15_i2861")]
-position = Vector2(2114, 779)
-
-[node name="Guardian7" parent="." index="18" instance=ExtResource("15_i2861")]
-position = Vector2(2918, 761)
-
-[node name="Skeleton3" parent="." index="19" instance=ExtResource("14_tusdb")]
-position = Vector2(2952, 674)
-
-[node name="Devil5" parent="." index="20" instance=ExtResource("16_rqv2l")]
-position = Vector2(2952, 599)
-
-[node name="Guardian8" parent="." index="21" instance=ExtResource("15_i2861")]
-position = Vector2(2522, 577)
-
-[node name="Guardian9" parent="." index="22" instance=ExtResource("15_i2861")]
-position = Vector2(3169, 576)
-
-[node name="Devil6" parent="." index="23" instance=ExtResource("16_rqv2l")]
-position = Vector2(706, 359)
-
-[node name="NextLevelPortal" type="Area2D" parent="." index="24"]
+[node name="NextLevelPortal" type="Area2D" parent="." index="6"]
 script = SubResource("GDScript_eqte6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NextLevelPortal" index="0"]
 position = Vector2(3427, 324)
 shape = SubResource("RectangleShape2D_hchu2")
 
-[node name="PauseMenu2" parent="." index="25" instance=ExtResource("9_icddv")]
+[node name="PauseMenu2" parent="." index="7" instance=ExtResource("9_icddv")]
 visible = false
 
 [node name="Gem" parent="." index="27" instance=ExtResource("10_6rclr")]
