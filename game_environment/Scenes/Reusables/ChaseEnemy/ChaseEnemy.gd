@@ -80,3 +80,15 @@ func _on_attack_range_body_entered(body: CharacterBody2D) -> void:
 func _on_attack_range_body_exited(body: CharacterBody2D) -> void:
 	if body.name == "Aurora":
 		attacking = false
+
+
+func take_damage(damage: int) -> void:
+	super(damage)
+	if health == 0:
+		$"../Aurora".ai_controller.reward += 0.6
+	$"../Aurora".ai_controller.reward += 0.2
+	
+	
+func stun(duration: float) -> void:
+	super(duration)
+	$"../Aurora".ai_controller.reward += 0.2

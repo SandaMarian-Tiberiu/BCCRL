@@ -54,3 +54,14 @@ func attack() -> void:
 	instance.damage = damage
 	add_child(instance)
 	
+
+func take_damage(damage: int) -> void:
+	super(damage)
+	if health == 0:
+		$"../Aurora".ai_controller.reward += 0.6
+	$"../Aurora".ai_controller.reward += 0.2
+	
+	
+func stun(duration: float) -> void:
+	super(duration)
+	$"../Aurora".ai_controller.reward += 0.2

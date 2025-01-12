@@ -1,2 +1,8 @@
+Timer
+RaycastSensor2D
+CollisionShape2D
+Area2D
+Sync
+AIController2D
 AudioStreamPlayer
 AudioStreamPlayer2D

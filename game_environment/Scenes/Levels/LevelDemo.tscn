@@ -1,0 +1,260 @@
+[gd_scene load_steps=29 format=3 uid="uid://f4le25l277hx"]
+
+[ext_resource type="Script" path="res://Scenes/Levels/resetter.gd" id="1_056y3"]
+[ext_resource type="Texture2D" uid="uid://35x4kjs54y8d" path="res://Assets/World/BaseTiles/FireSetGrid.png" id="1_bkxon"]
+[ext_resource type="Script" path="res://Scenes/Levels/TileMap.gd" id="2_gtjgj"]
+[ext_resource type="PackedScene" uid="uid://b81brgql6wu3h" path="res://Scenes/GameOver/GameOver.tscn" id="3_4redj"]
+[ext_resource type="Script" path="res://Scenes/Levels/UI/HPBar.gd" id="6_xtjqw"]
+[ext_resource type="Script" path="res://Scenes/Levels/UI/BasicAttack.gd" id="9_w6vsp"]
+[ext_resource type="Script" path="res://Scenes/Levels/UI/Stun.gd" id="9_ym0vw"]
+[ext_resource type="Script" path="res://addons/godot_rl_agents/sensors/sensors_2d/RaycastSensor2D.gd" id="13_det8t"]
+[ext_resource type="Texture2D" uid="uid://bqkpa71ayw8th" path="res://Assets/Mobs/Cat/Calico/Idle/0.png" id="14_hw8w6"]
+[ext_resource type="Texture2D" uid="uid://bb5lujfwqlrmd" path="res://Assets/UI/HealthBar/0.png" id="15_6l25r"]
+[ext_resource type="PackedScene" uid="uid://cx4yu3e5q0bfa" path="res://Scenes/Aurora/Aurora.tscn" id="15_ostti"]
+[ext_resource type="Texture2D" uid="uid://bfaosth1ip357" path="res://Assets/UI/SwordIcon/0.png" id="16_01hb8"]
+[ext_resource type="Texture2D" uid="uid://bvsmb0y575hpm" path="res://Assets/UI/SwordIcon/5.png" id="16_inuir"]
+[ext_resource type="Texture2D" uid="uid://x7mk5ax2o54n" path="res://Assets/UI/HealthBar/10.png" id="16_wte24"]
+[ext_resource type="PackedScene" uid="uid://dtpvgbiuh6clx" path="res://Scenes/Enemies/Devil/Devil.tscn" id="17_av0ch"]
+[ext_resource type="Script" path="res://Scenes/Levels/MORTIIMATI.gd" id="18_1g8f6"]
+[ext_resource type="PackedScene" uid="uid://cyn41tc01h1qv" path="res://Scenes/Enemies/Guardian/Guardian.tscn" id="18_3mtn2"]
+[ext_resource type="Script" path="res://addons/godot_rl_agents/sync.gd" id="19_hoefi"]
+[ext_resource type="PackedScene" uid="uid://kbgjirn72nlu" path="res://Scenes/PauseMenu/PauseMenu.tscn" id="34_u4mcx"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vjr16"]
+texture = ExtResource("1_bkxon")
+margins = Vector2i(1, 1)
+separation = Vector2i(1, 1)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+3:0/0 = 0
+3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:0/0/physics_layer_0/angular_velocity = 0.0
+4:0/0 = 0
+4:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:0/0/physics_layer_0/angular_velocity = 0.0
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
+3:1/0 = 0
+3:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:1/0/physics_layer_0/angular_velocity = 0.0
+4:1/0 = 0
+4:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:1/0/physics_layer_0/angular_velocity = 0.0
+0:2/0 = 0
+0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/0/physics_layer_0/angular_velocity = 0.0
+1:2/0 = 0
+1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:2/0/physics_layer_0/angular_velocity = 0.0
+2:2/0 = 0
+2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:2/0/physics_layer_0/angular_velocity = 0.0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:2/0 = 0
+3:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:2/0/physics_layer_0/angular_velocity = 0.0
+4:2/0 = 0
+4:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:2/0/physics_layer_0/angular_velocity = 0.0
+0:3/0 = 0
+0:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:3/0/physics_layer_0/angular_velocity = 0.0
+1:3/0 = 0
+1:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:3/0/physics_layer_0/angular_velocity = 0.0
+2:3/0 = 0
+2:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:3/0/physics_layer_0/angular_velocity = 0.0
+3:3/0 = 0
+3:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:3/0/physics_layer_0/angular_velocity = 0.0
+4:3/0 = 0
+4:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:3/0/physics_layer_0/angular_velocity = 0.0
+0:4/0 = 0
+0:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:4/0/physics_layer_0/angular_velocity = 0.0
+1:4/0 = 0
+1:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:4/0/physics_layer_0/angular_velocity = 0.0
+2:4/0 = 0
+2:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:4/0/physics_layer_0/angular_velocity = 0.0
+3:4/0 = 0
+3:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:4/0/physics_layer_0/angular_velocity = 0.0
+4:4/0 = 0
+4:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:4/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSet" id="TileSet_nwcoy"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_vjr16")
+
+[sub_resource type="TileSet" id="TileSet_ca80k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xbutl"]
+atlas = ExtResource("15_6l25r")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s4063"]
+atlas = ExtResource("16_wte24")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g2x8h"]
+atlas = ExtResource("16_01hb8")
+region = Rect2(0, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s1rs0"]
+atlas = ExtResource("16_inuir")
+region = Rect2(0, 0, 40, 40)
+
+[sub_resource type="GDScript" id="GDScript_emkyj"]
+script/source = "extends Area2D
+
+func _on_body_entered(body):
+	if body.name == \"Aurora\":
+		print(\"DONE\")
+		var obj = $\"../Aurora\"
+		obj.ai_controller.reward += 10.0
+		Player.reset()
+		Game.reset()
+		#get_tree().change_scene_to_file(\"res://Scenes/Levels/LevelDemo.tscn\")
+		obj.global_position = Vector2(obj.start_x, obj.start_y)
+		obj.ai_controller.reset()
+		$\"../Timer\".start()
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dvhq4"]
+size = Vector2(28.375, 55)
+
+[node name="Level1" type="Node2D"]
+script = ExtResource("1_056y3")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_nwcoy")
+format = 2
+layer_0/tile_data = PackedInt32Array(1900544, 131072, 2, 1900545, 131072, 2, 1900546, 131072, 2, 1900547, 131072, 2, 1900548, 131072, 2, 1900549, 131072, 2, 1900550, 131072, 2, 1900551, 131072, 2, 1900552, 131072, 2, 1900553, 131072, 2, 1900554, 131072, 2, 1900555, 131072, 2, 1900556, 131072, 2, 1900557, 131072, 2, 1900558, 131072, 2, 1900559, 131072, 2, 1900560, 131072, 2, 1900561, 131072, 2, 1900562, 131072, 2, 1900563, 131072, 2, 1900564, 131072, 2, 1900565, 131072, 2, 1900566, 131072, 2, 1900567, 131072, 2, 1900568, 131072, 2, 1900569, 131072, 2, 1900570, 131072, 2, 1900571, 131072, 2, 1900572, 131072, 2, 1900573, 131072, 2, 1900574, 131072, 2, 1900575, 131072, 2, 1900576, 131072, 2, 1900577, 131072, 2, 1900578, 131072, 2, 1900579, 131072, 2, 1900580, 131072, 2, 1900581, 131072, 2, 1900582, 131072, 2, 1900583, 131072, 2, 1900584, 131072, 2, 1900585, 131072, 2, 1900586, 131072, 2, 1900587, 131072, 2, 1900588, 131072, 2, 1900589, 131072, 2, 1900590, 131072, 2, 1900591, 131072, 2, 1900592, 131072, 2, 1900593, 131072, 2, 1900594, 131072, 2, 1900595, 131072, 2, 1900596, 131072, 2, 1900597, 131072, 2, 1900598, 131072, 2, 1900599, 131072, 2, 1900600, 131072, 2, 1900601, 131072, 2, 1900602, 131072, 2, 1900603, 131072, 2, 1900604, 131072, 2, 1900605, 131072, 2, 1900606, 131072, 2, 1900607, 131072, 2, 1900608, 131072, 2, 1900609, 131072, 2, 1900610, 131072, 2, 1900611, 131072, 2, 1900612, 131072, 2, 1900613, 131072, 2, 917504, 131072, 2, 983040, 131072, 2, 1048576, 131072, 2, 1114112, 131072, 2, 1179648, 131072, 2, 1245184, 131072, 2, 1310720, 131072, 2, 1376256, 131072, 2, 1441792, 131072, 2, 1507328, 131072, 2, 1572864, 131072, 2, 1638400, 131072, 2, 1703936, 131072, 2, 1769472, 131072, 2, 1835008, 131072, 2, 1572897, 131072, 2, 1638433, 131072, 2, 1703969, 131072, 2, 1769505, 131072, 2, 1835041, 131072, 2, 1835053, 131072, 2, 1769517, 131072, 2, 1703981, 131072, 2, 1900614, 131072, 2, 1900615, 131072, 2, 1900616, 131072, 2, 1900617, 131072, 2, 1900618, 131072, 2, 1900619, 131072, 2, 1900620, 131072, 2, 1900621, 131072, 2, 1900622, 131072, 2, 1900623, 131072, 2, 1900624, 131072, 2, 1900625, 131072, 2, 1900626, 131072, 2, 1900627, 131072, 2, 1900628, 131072, 2, 1900629, 131072, 2, 1900630, 131072, 2, 1900631, 131072, 2, 1900632, 131072, 2, 1900633, 131072, 2, 1900634, 131072, 2, 1900635, 131072, 2, 1900636, 131072, 2, 1900637, 131072, 2, 1900638, 131072, 2, 1900639, 131072, 2, 1900640, 131072, 2, 1900641, 131072, 2, 1900642, 131072, 2, 1900643, 131072, 2, 1900644, 131072, 2, 1900645, 131072, 2, 1900646, 131072, 2, 1900647, 131072, 2, 1900648, 131072, 2, 1900649, 131072, 2, 1638481, 131072, 2, 1704017, 131072, 2, 1769553, 131072, 2, 1835089, 131072, 2, 1704006, 131072, 2, 1769542, 131072, 2, 1835078, 131072, 2, 721001, 131072, 2, 786537, 131072, 2, 852073, 131072, 2, 917609, 131072, 2, 983145, 131072, 2, 1048681, 131072, 2, 1114217, 131072, 2, 1179753, 131072, 2, 1245289, 131072, 2, 1310825, 131072, 2, 1376361, 131072, 2, 1441897, 131072, 2, 1507433, 131072, 2, 1572969, 131072, 2, 1638505, 131072, 2, 1704041, 131072, 2, 1769577, 131072, 2, 1835113, 131072, 2)
+script = ExtResource("2_gtjgj")
+
+[node name="TileMap2" type="TileMap" parent="."]
+visible = false
+tile_set = SubResource("TileSet_ca80k")
+format = 2
+layer_0/tile_data = PackedInt32Array(1638475, 262144, 1, 1638476, 262144, 1, 1638477, 262144, 1, 1638478, 262144, 1, 1638479, 262144, 1, 1638480, 262144, 1, 1638481, 262144, 1, 1638482, 262144, 1, 1638483, 262144, 1, 1704012, 262144, 1, 1704013, 262144, 1, 1704014, 262144, 1, 1704015, 262144, 1, 1704016, 262144, 1, 1704017, 262144, 1, 1704018, 262144, 1, 1769550, 262144, 1, 1769551, 262144, 1, 1769552, 262144, 1, 1769553, 262144, 1, 1835087, 262144, 1, 1835088, 262144, 1, 1769549, 262144, 1, 1835086, 262144, 1, 1900623, 262144, 1, 1835098, 262144, 0, 1835099, 262144, 0, 1835100, 262144, 0, 1835101, 262144, 0, 1835102, 262144, 0, 1835103, 262144, 0, 1835104, 262144, 0, 1835105, 262144, 0, 1835106, 262144, 0, 1835107, 262144, 0, 1835108, 262144, 0, 1835109, 262144, 0, 1835110, 262144, 0, 1835111, 262144, 0, 1835112, 262144, 0, 1441792, 524288, 0, 1507328, 524288, 0, 1572864, 524288, 0, 1638400, 524288, 0, 1703936, 524288, 0, 1769472, 524288, 0, 1835008, 327680, 1, 1441793, 524288, 0, 1507329, 524288, 0, 1572865, 524288, 0, 1638401, 524288, 0, 1703937, 524288, 0, 1769473, 524288, 0, 1835009, 393216, 1, 1441794, 524288, 0, 1507330, 524288, 0, 1572866, 524288, 0, 1638402, 524288, 0, 1703938, 524288, 0, 1769474, 524288, 0, 1835010, 393216, 1, 1441795, 524288, 0, 1507331, 524288, 0, 1572867, 524288, 0, 1638403, 524288, 0, 1703939, 524288, 0, 1769475, 524288, 0, 1835011, 393216, 1, 1441796, 524288, 0, 1507332, 524288, 0, 1572868, 524288, 0, 1638404, 524288, 0, 1703940, 524288, 0, 1769476, 524288, 0, 1835012, 393216, 1, 1441797, 524288, 0, 1507333, 524288, 0, 1572869, 524288, 0, 1638405, 524288, 0, 1703941, 524288, 0, 1769477, 524288, 0, 1835013, 393216, 1, 1441798, 524288, 0, 1507334, 524288, 0, 1572870, 524288, 0, 1638406, 524288, 0, 1703942, 524288, 0, 1769478, 524288, 0, 1835014, 393216, 1, 1441799, 524288, 0, 1507335, 524288, 0, 1572871, 524288, 0, 1638407, 524288, 0, 1703943, 524288, 0, 1769479, 524288, 0, 1835015, 458752, 1, 1835116, 196608, 0, 1835117, 196608, 0, 1835118, 196608, 0, 1835119, 196608, 0, 1835120, 196608, 0, 1835121, 196608, 0, 1835122, 196608, 0, 1835123, 196608, 0, 1835124, 196608, 0, 1835125, 196608, 0, 1835126, 196608, 0, 1835127, 196608, 0)
+
+[node name="GameOver" parent="." instance=ExtResource("3_4redj")]
+visible = false
+
+[node name="HPBar" type="CanvasLayer" parent="."]
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="HPBar"]
+offset_right = 204.0
+offset_bottom = 204.0
+max_value = 1.0
+step = 0.001
+value = 1.0
+nine_patch_stretch = true
+texture_under = SubResource("AtlasTexture_xbutl")
+texture_progress = SubResource("AtlasTexture_s4063")
+script = ExtResource("6_xtjqw")
+
+[node name="BasicAttack" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="AbilitiesUI" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="BasicAttack" type="TextureProgressBar" parent="AbilitiesUI"]
+offset_left = 20.0
+offset_top = 521.0
+offset_right = 115.0
+offset_bottom = 616.0
+max_value = 1.0
+step = 0.01
+value = 1.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_under = SubResource("AtlasTexture_g2x8h")
+texture_progress = SubResource("AtlasTexture_s1rs0")
+script = ExtResource("9_w6vsp")
+
+[node name="Stun" type="TextureProgressBar" parent="AbilitiesUI"]
+offset_left = 122.0
+offset_top = 521.0
+offset_right = 217.0
+offset_bottom = 616.0
+max_value = 1.0
+step = 0.01
+value = 1.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_under = SubResource("AtlasTexture_g2x8h")
+texture_progress = SubResource("AtlasTexture_s1rs0")
+script = ExtResource("9_ym0vw")
+
+[node name="NextLevelPortal" type="Area2D" parent="."]
+script = SubResource("GDScript_emkyj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NextLevelPortal"]
+position = Vector2(1451, 435)
+shape = SubResource("RectangleShape2D_dvhq4")
+
+[node name="PauseMenu" parent="." instance=ExtResource("34_u4mcx")]
+visible = false
+
+[node name="Aurora" parent="." instance=ExtResource("15_ostti")]
+position = Vector2(169, 428)
+camera_left_limit = -1000
+camera_right_limit = 10000
+camera_top_limit = -1000
+camera_bottom_limit = 1000
+start_x = 169
+start_y = 428
+
+[node name="RaycastSensor2D" type="Node2D" parent="Aurora"]
+show_behind_parent = true
+position = Vector2(-2, -2)
+script = ExtResource("13_det8t")
+collide_with_areas = true
+
+[node name="AIController2D" type="Node2D" parent="."]
+position = Vector2(161, 419)
+script = ExtResource("18_1g8f6")
+
+[node name="Sync" type="Node" parent="."]
+script = ExtResource("19_hoefi")
+action_repeat = 10
+speed_up = 50.0
+
+[node name="0" type="Sprite2D" parent="."]
+position = Vector2(1450, 446)
+texture = ExtResource("14_hw8w6")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 30.0
+autostart = true
+
+[node name="Devil" parent="." instance=ExtResource("17_av0ch")]
+position = Vector2(1042, 451)
+damage = 10.0
+
+[node name="Guardian" parent="." instance=ExtResource("18_3mtn2")]
+position = Vector2(266, 452)
+
+[connection signal="body_entered" from="NextLevelPortal" to="NextLevelPortal" method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="Aurora" method="_on_timer_timeout2"]
