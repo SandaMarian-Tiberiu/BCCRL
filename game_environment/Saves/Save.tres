@@ -5,9 +5,9 @@
 [resource]
 script = ExtResource("1_t0qob")
 data = {
-"Gems": 1021,
-"GodMode": true,
+"Gems": 0,
+"GodMode": false,
 "HP": 100,
-"LevelName": "Level2",
-"Skin": "Princess"
+"LevelName": "Level1",
+"Skin": "Prisoner"
 }

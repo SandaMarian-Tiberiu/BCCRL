@@ -60,6 +60,9 @@ func take_damage(damage: int) -> void:
 		Game.enemy_dying_sound()
 		Game.add_coins(coins)
 		queue_free()
+		#visible = false
+		
+	
 		
 	# Sound for getting hit
 	$GettingHitSFX.play()

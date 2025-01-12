@@ -27,3 +27,14 @@ func _on_area_2d_body_exited(body: CharacterBody2D) -> void:
 		Game.exit_combat()
 		player = null
 
+
+func take_damage(damage: int) -> void:
+	super(damage)
+	if health == 0:
+		$"../Aurora".ai_controller.reward += 0.6
+	$"../Aurora".ai_controller.reward += 0.2
+	
+	
+func stun(duration: float) -> void:
+	super(duration)
+	$"../Aurora".ai_controller.reward += 0.2
