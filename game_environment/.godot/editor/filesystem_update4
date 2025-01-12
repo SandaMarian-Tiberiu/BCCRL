@@ -1,2 +1,6 @@
+res://Scenes/Levels/Level2.tscn
 res://Dialogic/BubbleStyle.tres
 res://Dialogic/VisualStyle.tres
+res://Scenes/Levels/Level2demo.tscn
+res://Scenes/Aurora/Aurora.tscn
+res://Scenes/Reusables/AbstractEnemy/AbstractEnemy.tscn

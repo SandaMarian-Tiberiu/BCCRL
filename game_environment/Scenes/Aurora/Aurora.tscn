@@ -1,4 +1,4 @@
-[gd_scene load_steps=86 format=3 uid="uid://cx4yu3e5q0bfa"]
+[gd_scene load_steps=85 format=3 uid="uid://cx4yu3e5q0bfa"]
 
 [ext_resource type="Script" path="res://Scenes/Aurora/Aurora.gd" id="1_834d8"]
 [ext_resource type="Texture2D" uid="uid://c3x0212ajqiag" path="res://Assets/Aurora/PrincessOutfit/Idle/0.png" id="1_fhatf"]
@@ -57,7 +57,6 @@
 [ext_resource type="Texture2D" uid="uid://csc826fr76ryx" path="res://Assets/Aurora/PrisonerOutfit/Stun/1.png" id="55_h6ufl"]
 [ext_resource type="AudioStream" uid="uid://b05ca52ynovkc" path="res://Assets/Audio/SFX/Wink.mp3" id="56_gxfhn"]
 [ext_resource type="AudioStream" uid="uid://ddc0edg6i5s8c" path="res://Assets/Audio/SFX/Swing.mp3" id="57_t3h3s"]
-[ext_resource type="AudioStream" uid="uid://c6xn5nny4pxuy" path="res://Assets/Audio/Music/Pixel Kindom.mp3" id="58_u4a02"]
 [ext_resource type="AudioStream" uid="uid://djahftyhqo2fm" path="res://Assets/Audio/SFX/Barbie getting hit.mp3" id="59_d6cnn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x3q5n"]
@@ -939,7 +938,6 @@ stream = ExtResource("57_t3h3s")
 bus = &"PlayerSFX"
 
 [node name="InGameMusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("58_u4a02")
 volume_db = -50.0
 autoplay = true
 bus = &"Music"

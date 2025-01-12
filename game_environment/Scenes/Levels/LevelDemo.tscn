@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://bvsmb0y575hpm" path="res://Assets/UI/SwordIcon/5.png" id="16_inuir"]
 [ext_resource type="Texture2D" uid="uid://x7mk5ax2o54n" path="res://Assets/UI/HealthBar/10.png" id="16_wte24"]
 [ext_resource type="PackedScene" uid="uid://dtpvgbiuh6clx" path="res://Scenes/Enemies/Devil/Devil.tscn" id="17_av0ch"]
-[ext_resource type="Script" path="res://Scenes/Levels/MORTIIMATI.gd" id="18_1g8f6"]
+[ext_resource type="Script" path="res://Scenes/Levels/ai_agent.gd" id="18_1g8f6"]
 [ext_resource type="PackedScene" uid="uid://cyn41tc01h1qv" path="res://Scenes/Enemies/Guardian/Guardian.tscn" id="18_3mtn2"]
 [ext_resource type="Script" path="res://addons/godot_rl_agents/sync.gd" id="19_hoefi"]
 [ext_resource type="PackedScene" uid="uid://kbgjirn72nlu" path="res://Scenes/PauseMenu/PauseMenu.tscn" id="34_u4mcx"]
